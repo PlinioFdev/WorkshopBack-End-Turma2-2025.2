@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Pessoa
+from .models import Endereco
 
-admin.site.register(Pessoa)
+# registra o model no admin
+admin.site.register(Endereco)

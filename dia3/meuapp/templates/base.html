@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ViaCEP CRUD</title>
+</head>
+<body>
+    <header>
+        <h1>🌍 ViaCEP CRUD</h1>
+        <nav>
+            <a href="{% url 'cep_form' %}">Buscar CEP</a> |
+            <a href="{% url 'endereco_list' %}">Listar Endereços</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>Desenvolvido com ❤️ em Django</p>
+    </footer>
+</body>
+</html>

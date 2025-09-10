@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>⚠️ Confirmar exclusão</h2>
+<p>Tem certeza que deseja deletar o endereço <strong>{{ object.cep }}</strong>?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, deletar</button>
+</form>
+
+<a href="{% url 'endereco_list' %}">Cancelar</a>
+{% endblock %}

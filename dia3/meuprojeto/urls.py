@@ -1,8 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("<h1>Bem-vindo ao meu projeto Django </h1>")
 
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
-    path('', include('meuapp.urls')),
-
+    path('viacep/', include('meuapp.urls')),
 ]
